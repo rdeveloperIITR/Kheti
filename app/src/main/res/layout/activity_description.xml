@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.rdeveloper.paviliong6.kheti.DescriptionActivity"
+    android:background="#dfdddd">
+
+
+    <ImageView
+        android:layout_width="fill_parent"
+        android:layout_height="130dp"
+        android:id="@+id/decription_image"
+        android:layout_alignParentTop="true"
+        android:src="@drawable/failed_image"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:text="New Text"
+        android:id="@+id/description_text"
+        android:layout_below="@+id/decription_image"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="5dp"
+        android:gravity="top"
+        android:background="@drawable/border"
+        android:textColor="#dc1111" />
+
+    <EditText
+        android:layout_width="fill_parent"
+        android:layout_height="80dp"
+        android:id="@+id/description_comment"
+        android:background="@drawable/border"
+        android:hint="Comment"
+        android:gravity="top"
+        android:padding="3dp"
+        android:maxLines="1"
+        android:lines="1"
+        android:maxLength="100"
+        android:layout_marginTop="40dp"
+        android:layout_below="@+id/description_text"
+        android:layout_alignLeft="@+id/description_text"
+        android:layout_alignStart="@+id/description_text"
+        android:layout_alignRight="@+id/description_text"
+        android:layout_alignEnd="@+id/description_text"
+        android:textColor="#dc1111" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/description_image_comment"
+        android:src="@drawable/comment"
+        android:layout_alignParentBottom="true"
+        android:layout_alignLeft="@+id/description_comment"
+        android:layout_alignStart="@+id/description_comment"
+        android:onClick="onComment"
+        android:nestedScrollingEnabled="false" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/description_image_arrow"
+        android:src="@drawable/arrow"
+        android:layout_alignTop="@+id/description_image_comment"
+        android:layout_alignRight="@+id/description_comment"
+        android:layout_alignEnd="@+id/description_comment"
+        android:onClick="onListComment" />
+
+
+</RelativeLayout>
